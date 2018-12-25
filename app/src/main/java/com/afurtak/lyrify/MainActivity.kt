@@ -2,6 +2,7 @@ package com.afurtak.lyrify
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.coroutines.runBlocking
 
 class MainActivity : AppCompatActivity() {
 
