@@ -13,7 +13,17 @@ data class Song(val title: String, val artist: String) {
     }
 
     private fun createUrlForSong(): String {
-        return "https://www.tekstowo.pl/piosenka,${artist.replace(' ', '_')},${title.replace(' ', '_')}.html"
+        val artist = this.artist
+                .replace(' ', '_')
+                .replace('&', '_')
+                .toLowerCase()
+        val title = this.title
+                .replace(' ', '_')
+                .replace('&', '_')
+                .toLowerCase()
+
+        println("$artist, $title")
+        return "https://www.tekstowo.pl/piosenka,$artist,$title.html"
     }
 
     private fun getWebPage(url: String) : String? {
@@ -43,7 +53,9 @@ data class Song(val title: String, val artist: String) {
         return result
     }
 
-    private fun parseLyrics(fullPageCode: String) : String {
+    private fun parseLyrics(fullPageCode: String) : String? {
+//        if (fullPageCode.contains("Nie ma takiego pliku", true))
+//            return null
         return fullPageCode
                 .substringAfter("Tekst piosenki:</h2><br />")
                 .substringBefore("<p>&nbsp;</p>")
