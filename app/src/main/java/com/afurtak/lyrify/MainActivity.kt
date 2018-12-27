@@ -6,6 +6,13 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.view.View
 import android.widget.*
+import com.spotify.sdk.android.authentication.AuthenticationClient
+import com.spotify.sdk.android.authentication.AuthenticationRequest
+import com.spotify.sdk.android.authentication.AuthenticationResponse
+import com.spotify.sdk.android.authentication.LoginActivity.REQUEST_CODE
+import android.content.Intent
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +28,10 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var inputFormLayout : LinearLayout
     private lateinit var downloadingProgressBar: ProgressBar
+
+    private var spotifyToken = ""
+    private val spotifyClientId = "1a9664b8e378430285f036a4783b1ac4"
+    private val spotifyRedirectUri = "https://example.com/callback/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +53,14 @@ class MainActivity : AppCompatActivity() {
             searchForLyrics()
         }
 
+        searchForLyricsFromSpotifyButton.setOnClickListener {
+            if (spotifyToken == "")
+                getSpotifyAuthorizationToken()
+            else {
+                startListeningForSpotifySongs()
+            }
+        }
+
         fab.setOnClickListener {
             titleInput.setText("")
             artistInput.setText("")
@@ -49,6 +68,44 @@ class MainActivity : AppCompatActivity() {
             resultLayout.visibility = View.GONE
             inputFormLayout.visibility = View.VISIBLE
         }
+    }
+
+    private fun startListeningForSpotifySongs() {
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, resultIntent: Intent?) {
+        super.onActivityResult(requestCode, resultCode, resultIntent)
+
+        // Check if result comes from the correct activity
+        if (requestCode == REQUEST_CODE) {
+            val response = AuthenticationClient.getResponse(resultCode, resultIntent)
+
+            when (response.type) {
+                AuthenticationResponse.Type.TOKEN -> {
+                    Toast.makeText(this, "successful authentication", Toast.LENGTH_SHORT).show()
+                    spotifyToken = response.accessToken
+                    startListeningForSpotifySongs()
+                }
+                AuthenticationResponse.Type.ERROR ->
+                    Toast.makeText(this, "failed authentication", Toast.LENGTH_SHORT).show()
+                AuthenticationResponse.Type.CODE ->
+                    Toast.makeText(this, "failed authentication", Toast.LENGTH_SHORT).show()
+                AuthenticationResponse.Type.EMPTY ->
+                    Toast.makeText(this, "failed authentication", Toast.LENGTH_SHORT).show()
+                AuthenticationResponse.Type.UNKNOWN ->
+                    Toast.makeText(this, "failed authentication", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun getSpotifyAuthorizationToken() {
+        val builder = AuthenticationRequest.Builder(spotifyClientId, AuthenticationResponse.Type.TOKEN, spotifyRedirectUri)
+
+        builder.setScopes(arrayOf("streaming"))
+        val request = builder.build()
+
+        AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request)
     }
 
     fun searchForLyrics() {
