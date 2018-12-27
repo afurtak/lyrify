@@ -11,9 +11,7 @@ import com.spotify.sdk.android.authentication.AuthenticationRequest
 import com.spotify.sdk.android.authentication.AuthenticationResponse
 import com.spotify.sdk.android.authentication.LoginActivity.REQUEST_CODE
 import android.content.Intent
-
-
-
+import com.afurtak.lyrify.spotifyapiutils.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inputFormLayout : LinearLayout
     private lateinit var downloadingProgressBar: ProgressBar
 
-    private var spotifyToken = ""
+    private var spotifyAccesToken = ""
     private val spotifyClientId = "1a9664b8e378430285f036a4783b1ac4"
     private val spotifyRedirectUri = "https://example.com/callback/"
 
@@ -54,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         searchForLyricsFromSpotifyButton.setOnClickListener {
-            if (spotifyToken == "")
+            if (spotifyAccesToken == "")
                 getSpotifyAuthorizationToken()
             else {
                 startListeningForSpotifySongs()
@@ -71,7 +69,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startListeningForSpotifySongs() {
-
+        SpotifyListener().execute()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultIntent: Intent?) {
@@ -84,7 +82,7 @@ class MainActivity : AppCompatActivity() {
             when (response.type) {
                 AuthenticationResponse.Type.TOKEN -> {
                     Toast.makeText(this, "successful authentication", Toast.LENGTH_SHORT).show()
-                    spotifyToken = response.accessToken
+                    spotifyAccesToken = response.accessToken
                     startListeningForSpotifySongs()
                 }
                 AuthenticationResponse.Type.ERROR ->
@@ -144,5 +142,36 @@ class MainActivity : AppCompatActivity() {
                 resultTextView.text = "Lyrics did not find"
         }
 
+    }
+
+    inner class SpotifyListener : AsyncTask<Unit, String, Unit>() {
+
+        override fun doInBackground(vararg p0: Unit?) {
+            var prev: Song? = null
+            while (true) {
+                val song = CurrentlyPlaying.getCurrentluPlaying(spotifyAccesToken)
+                if (song != prev) {
+                    prev = song
+                    if (song != null) {
+                        val lyrics = song.getLyrics()
+                        if (lyrics != null)
+                            publishProgress(lyrics)
+                        else
+                            publishProgress("No lyrics found.")
+                    } else {
+                        publishProgress("Nothing is playing now.")
+                    }
+                }
+                Thread.sleep(1000)
+            }
+        }
+
+        override fun onProgressUpdate(vararg values: String?) {
+            super.onProgressUpdate(*values)
+            downloadingProgressBar.visibility = View.GONE
+            inputFormLayout.visibility = View.GONE
+            resultLayout.visibility = View.VISIBLE
+            resultTextView.text = values[0]
+        }
     }
 }
