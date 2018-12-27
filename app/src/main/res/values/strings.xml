@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lyrify</string>
+    <string name="search_for_lyrics">search for lyrics</string>
+    <string name="get_spotify_song_lyrics">get spotify song lyrics</string>
 </resources>

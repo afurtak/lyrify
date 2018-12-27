@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main_layout"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -31,8 +32,15 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Submit"
-            android:id="@+id/subit_button"
+            android:text="@string/search_for_lyrics"
+            android:id="@+id/search_for_lyrics"
+            android:layout_margin="20dp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/get_spotify_song_lyrics"
+            android:id="@+id/get_spotify_song_lyric"
             android:layout_margin="20dp"
             />
 
@@ -61,6 +69,15 @@
         </ScrollView>
 
     </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/main_layout"
+        app:layout_constraintEnd_toEndOf="@id/main_layout"
+        android:layout_margin="16dp"
+        android:src="@drawable/search_icon" />
 
 
 </android.support.constraint.ConstraintLayout>
