@@ -8,6 +8,7 @@ MERGED from [com.android.support:design:28.0.0] /home/afurtak/.gradle/caches/tra
 MERGED from [com.android.support:appcompat-v7:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3bb1b3a5fdfef0672975be35da1f50b3/AndroidManifest.xml:17:1-22:12
 MERGED from [:spotify-auth-release-1.1.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/spotify-auth-release-1.1.0.aar/9d9e5ba2101fbce6008df85b5ac11448/AndroidManifest.xml:22:1-55:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/afurtak/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/0c29ae960859e4fd02c8438610923f08/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/988596fd6c769b8b6b5a88e8a1c64159/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/89de68f597cf6333e755dac771af0f50/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/8de286c370246c93c607ac45bed28b5c/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/706c88d93b1df1c41144a535555a7cec/AndroidManifest.xml:17:1-22:12
@@ -15,6 +16,7 @@ MERGED from [com.android.support:support-core-ui:28.0.0] /home/afurtak/.gradle/c
 MERGED from [com.android.support:support-core-utils:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/8c9b0aa313b23c4d78c63dfbcb31b0e5/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/bd40e12f86aaeb92dd4aaae0c3ece8f7/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:transition:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/926d721f5c38802d72891c606ca0da22/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/d108caa8807bbcde1cc5c2aebb8c91d6/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:loader:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/3c8406510dfaafbd69c4460a1b813260/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:viewpager:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/947908d1bf747d64c1f0b64b7e9a52b5/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/c62be743b121a7010ff48581ed390015/AndroidManifest.xml:17:1-22:12
@@ -119,6 +121,8 @@ MERGED from [:spotify-auth-release-1.1.0] /home/afurtak/.gradle/caches/transform
 MERGED from [:spotify-auth-release-1.1.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/spotify-auth-release-1.1.0.aar/9d9e5ba2101fbce6008df85b5ac11448/AndroidManifest.xml:27:5-29:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/afurtak/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/0c29ae960859e4fd02c8438610923f08/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/afurtak/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/0c29ae960859e4fd02c8438610923f08/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/988596fd6c769b8b6b5a88e8a1c64159/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/988596fd6c769b8b6b5a88e8a1c64159/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/89de68f597cf6333e755dac771af0f50/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/89de68f597cf6333e755dac771af0f50/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/8de286c370246c93c607ac45bed28b5c/AndroidManifest.xml:20:5-44
@@ -133,6 +137,8 @@ MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/afurtak/.
 MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/bd40e12f86aaeb92dd4aaae0c3ece8f7/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/926d721f5c38802d72891c606ca0da22/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/926d721f5c38802d72891c606ca0da22/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/d108caa8807bbcde1cc5c2aebb8c91d6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/d108caa8807bbcde1cc5c2aebb8c91d6/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:loader:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/3c8406510dfaafbd69c4460a1b813260/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:loader:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/3c8406510dfaafbd69c4460a1b813260/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:viewpager:28.0.0] /home/afurtak/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/947908d1bf747d64c1f0b64b7e9a52b5/AndroidManifest.xml:20:5-44

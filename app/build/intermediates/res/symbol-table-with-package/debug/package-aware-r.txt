@@ -671,6 +671,7 @@ color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color notification_material_background_media_default_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -900,6 +901,10 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -1029,6 +1034,7 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id action0
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1060,6 +1066,7 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id cancel_action
 id center
 id center_horizontal
 id center_vertical
@@ -1090,6 +1097,7 @@ id disableHome
 id download_progress_bar
 id edit_query
 id end
+id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -1114,7 +1122,9 @@ id icon_group
 id ifRoom
 id image
 id info
+id input_artist
 id input_form_layout
+id input_title
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1128,6 +1138,7 @@ id list_item
 id lyrics_text_view
 id main_layout
 id masked
+id media_actions
 id message
 id middle
 id mini
@@ -1156,6 +1167,7 @@ id result_layout
 id right
 id right_icon
 id right_side
+id root
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1196,9 +1208,11 @@ id src_in
 id src_over
 id standard
 id start
+id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
+id submit_button
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -1298,12 +1312,22 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout fragment_search_song_form
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
 layout notification_action_tombstone
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
 layout notification_template_custom_big
 layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout select_dialog_item_material
@@ -1362,6 +1386,7 @@ string com_spotify_sdk_redirect_scheme
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string get_spotify_song_lyrics
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string mtrl_chip_close_icon_content_description
 string password_toggle_content_description
@@ -1651,9 +1676,14 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+style TextAppearance_Compat_Notification_Info_Media
 style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
 style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
 style TextAppearance_Design_CollapsingToolbar_Expanded
 style TextAppearance_Design_Counter
 style TextAppearance_Design_Counter_Overflow
