@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/afurtak/private/Lyrify/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+            "outputFile": "/home/afurtak/Projects/Lyrify/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/79b5379dd4a33fa104dcce02df3b4e26/res/values-v23/values-v23.xml",
+                    "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/750dfa9f9070fd3a2ac8e31bde977d32/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6d5cd530af65bfeaf01d25b2bfb164a1/res/values-v23/values-v23.xml",
+                    "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3bb1b3a5fdfef0672975be35da1f50b3/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

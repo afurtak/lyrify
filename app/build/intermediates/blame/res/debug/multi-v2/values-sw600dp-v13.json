@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/afurtak/private/Lyrify/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "/home/afurtak/Projects/Lyrify/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6d5cd530af65bfeaf01d25b2bfb164a1/res/values-sw600dp-v13/values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
-                    }
-                },
-                {
-                    "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5c190b45f66dba416a1e8cb7673aa588/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/8842535c09b4282dbec7651d02b023cb/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -30,6 +20,16 @@
                         "endLines": "10,11,12,13,14,15,17,18,19,23",
                         "endColumns": "59,69,70,71,57,57,10,63,62,10",
                         "endOffsets": "666,736,807,879,937,995,1104,1168,1231,1403"
+                    }
+                },
+                {
+                    "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3bb1b3a5fdfef0672975be35da1f50b3/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
                     }
                 }
             ]
