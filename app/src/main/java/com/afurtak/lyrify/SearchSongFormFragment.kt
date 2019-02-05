@@ -9,6 +9,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 
 /**
@@ -19,9 +21,9 @@ private const val titleInputTextKey = "Title Input Text Key"
 
 class SearchSongFormFragment : Fragment() {
 
-    lateinit var artistInput: TextInputEditText
-    lateinit var titleInput: TextInputEditText
-    lateinit var submitButton: MaterialButton
+    lateinit var artistInput: EditText
+    lateinit var titleInput: EditText
+    lateinit var submitButton: Button
 
     lateinit var listener: SearchSongFormFragmentListener
 
@@ -32,8 +34,8 @@ class SearchSongFormFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val root = inflater.inflate(R.layout.fragment_search_song_form, container, false)
 
-        artistInput = root.findViewById(R.id.artist_input)
-        titleInput = root.findViewById(R.id.title_input)
+        artistInput = root.findViewById(R.id.input_artist)
+        titleInput = root.findViewById(R.id.input_title)
         submitButton = root.findViewById(R.id.submit_button)
 
         if (savedInstanceState != null) {
@@ -63,7 +65,7 @@ class SearchSongFormFragment : Fragment() {
     /**
      * Initialize listener as casted context class.
      * If context class does not implement SearchSongFormFragmentListener
-     * show corresponding log and throws exception
+     * it is initialized as an empty.
      */
     override fun onAttach(context: Context?) {
         super.onAttach(context)
@@ -71,8 +73,9 @@ class SearchSongFormFragment : Fragment() {
             listener = context as SearchSongFormFragmentListener
         }
         catch (e: TypeCastException) {
-            Log.d("ERROR", "Context of this fragment must implement SearchSongFormListener.")
-            e.printStackTrace()
+            listener = object : SearchSongFormFragmentListener {
+                override fun onSongFormSubmit(song: Song) { }
+            }
         }
     }
 

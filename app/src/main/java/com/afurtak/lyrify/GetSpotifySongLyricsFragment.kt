@@ -8,12 +8,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 
 class GetSpotifySongLyricsFragment : Fragment() {
 
     lateinit var root: View
-    lateinit var getLyricsButton: MaterialButton
+    lateinit var getLyricsButton: Button
 
     lateinit var listener: GetSpotifyLricsFragmentListener
 
@@ -34,7 +35,7 @@ class GetSpotifySongLyricsFragment : Fragment() {
     /**
      * Initialize listener as casted context class.
      * If context class does not implement GetSpotifyLyricsFragmentListener
-     * show corresponding log and throws exception
+     * it is initialized as an empty.
      */
     override fun onAttach(context: Context?) {
         super.onAttach(context)
@@ -42,8 +43,9 @@ class GetSpotifySongLyricsFragment : Fragment() {
             listener = context as GetSpotifyLricsFragmentListener
         }
         catch (e: TypeCastException) {
-            Log.d("ERROR", "Context of this fragment must implement GetSpotifyLyricsFragmentListener.")
-            e.printStackTrace()
+            listener = object : GetSpotifyLricsFragmentListener {
+                override fun onGetLyrics() { }
+            }
         }
     }
 }

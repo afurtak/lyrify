@@ -1,4 +1,4 @@
-#Tue Feb 05 23:49:09 CET 2019
+#Wed Feb 06 00:32:37 CET 2019
 base.0=/home/afurtak/Projects/Lyrify/app/build/intermediates/transforms/dexMerger/debug/2
 path.0=classes.dex
 renamed.0=classes.dex
