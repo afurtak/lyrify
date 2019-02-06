@@ -11,6 +11,7 @@ import com.spotify.sdk.android.authentication.AuthenticationRequest
 import com.spotify.sdk.android.authentication.AuthenticationResponse
 import com.spotify.sdk.android.authentication.LoginActivity.REQUEST_CODE
 import android.content.Intent
+import android.os.PersistableBundle
 import com.afurtak.lyrify.spotifyapiutils.*
 
 class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpotifyLricsFragmentListener {
@@ -19,13 +20,29 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
     private lateinit var getSpotifySongLyricsFragment: GetSpotifySongLyricsFragment
     private lateinit var searchSongFormFragment: SearchSongFormFragment
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        addGetSpotifySongLyricsFragment()
+        if (savedInstanceState != null) {
+            if (savedInstanceState.containsKey("SearchSongFormFragmentKey")) {
+                searchSongFormFragment = supportFragmentManager.getFragment(savedInstanceState, "SearchSongFormFragmentKey") as SearchSongFormFragment
+            }
 
+            if (savedInstanceState.containsKey("GetSpotifySongLyricsFragmentKey")) {
+                getSpotifySongLyricsFragment = supportFragmentManager.getFragment(savedInstanceState, "GetSpotifySongLyricsFragmentKey") as GetSpotifySongLyricsFragment
+                supportFragmentManager.beginTransaction()
+                        .add(R.id.search_form_container, getSpotifySongLyricsFragment)
+                        .commit()
+            }
+        }
+        else {
+            addGetSpotifySongLyricsFragment()
+        }
+        initializeFab()
+    }
+
+    private fun initializeFab() {
         fab = findViewById(R.id.fab)
         fab.setOnClickListener {
             if (!::searchSongFormFragment.isInitialized)
@@ -33,6 +50,7 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
 
             supportFragmentManager.beginTransaction()
                     .replace(R.id.search_form_container, searchSongFormFragment)
+                    .addToBackStack(null)
                     .commit()
         }
     }
@@ -80,6 +98,12 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
 
     override fun onSongFormSubmit(song: Song) {
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle?) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        supportFragmentManager.putFragment(outState, "GetSpotifySongLyricsFragmentKey", getSpotifySongLyricsFragment)
+        supportFragmentManager.putFragment(outState, "SearchSongFormFragmentKey", searchSongFormFragment)
     }
 
 //    fun searchForLyrics() {
