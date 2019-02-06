@@ -1,5 +1,6 @@
 package com.afurtak.lyrify
 
+import android.app.Activity
 import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,8 @@ import com.spotify.sdk.android.authentication.LoginActivity.REQUEST_CODE
 import android.content.Intent
 import android.os.PersistableBundle
 import com.afurtak.lyrify.spotifyapiutils.*
+import com.spotify.sdk.android.authentication.AuthenticationRequest
+import com.spotify.sdk.android.authentication.LoginActivity
 
 class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpotifyLricsFragmentListener {
     private lateinit var fab : FloatingActionButton
@@ -19,9 +22,17 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
     private lateinit var searchSongFormFragment: SearchSongFormFragment
     private lateinit var lyricsFragment: LyricsFragment
 
+    var spotifyAccesToken = ""
+    val spotifyClientId = "1a9664b8e378430285f036a4783b1ac4"
+    val spotifyRedirectUri = "https://example.com/callback/"
+
+    var isSpotifyListening = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        getSpotifyAuthorizationToken()
 
         if (savedInstanceState != null) {
             restoreData(savedInstanceState)
@@ -68,7 +79,10 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
     private fun startListeningForSpotifySongs() {
         if (!::lyricsFragment.isInitialized)
             lyricsFragment = LyricsFragment()
-        SpotifyListener().execute()
+        if(!isSpotifyListening) {
+            SpotifyListener().execute()
+            isSpotifyListening = true
+        }
     }
 
     private fun addLyricsFragmentOnStack(title: String, lyrics: String) {
@@ -77,6 +91,16 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
         else {
             lyricsFragment.setContent(title, lyrics)
         }
+
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.search_form_container, lyricsFragment)
+                .addToBackStack(null)
+                .commit()
+    }
+
+    private fun addLyricsFragmentOnStack() {
+        if (!::lyricsFragment.isInitialized)
+            lyricsFragment = LyricsFragment()
 
         supportFragmentManager.beginTransaction()
                 .replace(R.id.search_form_container, lyricsFragment)
@@ -93,9 +117,8 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
 
             when (response.type) {
                 AuthenticationResponse.Type.TOKEN -> {
-                    Toast.makeText(this, "successful authentication", Toast.LENGTH_SHORT).show()
-                    CurrentlyPlaying.spotifyAccesToken = response.accessToken
-                    startListeningForSpotifySongs()
+                    spotifyAccesToken = response.accessToken
+                    Toast.makeText(this, spotifyAccesToken, Toast.LENGTH_SHORT).show()
                 }
                 AuthenticationResponse.Type.ERROR ->
                     Toast.makeText(this, "failed authentication", Toast.LENGTH_SHORT).show()
@@ -109,13 +132,24 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
         }
     }
 
+    fun getSpotifyAuthorizationToken() {
+        val builder = AuthenticationRequest.Builder(spotifyClientId, AuthenticationResponse.Type.TOKEN, spotifyRedirectUri)
+
+        builder.setScopes(arrayOf("user-read-currently-playing"))
+        val request = builder.build()
+
+        AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request)
+
+    }
+
     /**
      * Calls when button in GetSpotifySongFragment was pressed.
      */
     override fun onGetLyrics() {
-        if (CurrentlyPlaying.spotifyAccesToken == "") {
-            SpotifyAuthorizationUtils.getSpotifyAuthorizationToken(this)
+        if (spotifyAccesToken == "") {
+            getSpotifyAuthorizationToken()
         }
+        addLyricsFragmentOnStack()
         startListeningForSpotifySongs()
     }
 
@@ -153,7 +187,7 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
         override fun doInBackground(vararg p0: Unit?) {
             var prev: Song? = null
             while (true) {
-                val song = CurrentlyPlaying.getCurrentluPlaying(CurrentlyPlaying.spotifyAccesToken)
+                val song = CurrentlyPlaying.getCurrentluPlaying(spotifyAccesToken)
                 if (song != prev) {
                     prev = song
                     if (song != null) {
@@ -172,7 +206,14 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
 
         override fun onProgressUpdate(vararg values: String?) {
             super.onProgressUpdate(*values)
-            lyricsFragment.setContent(values[0]!!, values[1]!!)
+            if (lyricsFragment.isVisible) {
+                lyricsFragment.setContent(values[0]!!, values[1]!!)
+            }
+            else {
+                Toast.makeText(this@MainActivity, "is cancelled", Toast.LENGTH_LONG).show()
+                this.cancel(false)
+                isSpotifyListening = false
+            }
         }
     }
 }

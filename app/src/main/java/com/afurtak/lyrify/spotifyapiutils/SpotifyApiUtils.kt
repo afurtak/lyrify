@@ -18,24 +18,21 @@ object CurrentlyPlaying {
     private val url = "https://api.spotify.com/v1/me/player/currently-playing"
     private val tokenHeader = "Authorization"
 
-    var spotifyAccesToken = ""
-    val spotifyClientId = "1a9664b8e378430285f036a4783b1ac4"
-    val spotifyRedirectUri = "https://example.com/callback/"
-
-    fun getCurrentluPlaying(accesToken: String): Song? {
-        val responseFromSpotify = getResponseFromSPotify(accesToken)
+    fun getCurrentluPlaying(spotifyAccesToken: String): Song? {
+        val responseFromSpotify = getResponseFromSPotify(spotifyAccesToken)
         responseFromSpotify ?: return null
 
         return parseResponse(responseFromSpotify)
     }
 
-    fun getResponseFromSPotify(accesToken: String): JSONObject? {
+    fun getResponseFromSPotify(spotifyAccesToken: String): JSONObject? {
 
         val client = OkHttpClient()
+        val token = spotifyAccesToken
 
         val request = Request.Builder()
                 .url(url)
-                .addHeader(tokenHeader, "Bearer $accesToken")
+                .addHeader(tokenHeader, "Bearer $spotifyAccesToken")
                 .build()
 
         val countDownLatch = CountDownLatch(1)
@@ -56,6 +53,8 @@ object CurrentlyPlaying {
 
         countDownLatch.await()
         result ?: return null
+        if (result == "")
+            return null
         return JSONObject(result)
     }
 
@@ -75,12 +74,5 @@ object CurrentlyPlaying {
 }
 
 object SpotifyAuthorizationUtils {
-    fun getSpotifyAuthorizationToken(activity: Activity) {
-        val builder = AuthenticationRequest.Builder(CurrentlyPlaying.spotifyClientId, AuthenticationResponse.Type.TOKEN, CurrentlyPlaying.spotifyRedirectUri)
 
-        builder.setScopes(arrayOf("streaming"))
-        val request = builder.build()
-
-        AuthenticationClient.openLoginActivity(activity, LoginActivity.REQUEST_CODE, request)
-    }
 }
