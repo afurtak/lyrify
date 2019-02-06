@@ -1132,6 +1132,7 @@ id line1
 id line3
 id listMode
 id list_item
+id lyrics
 id main_layout
 id masked
 id media_actions
@@ -1307,6 +1308,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_get_spotify_song_lyrics
+layout fragment_lyrics
 layout fragment_search_song_form
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
