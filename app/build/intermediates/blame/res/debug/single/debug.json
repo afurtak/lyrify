@@ -1204,16 +1204,16 @@
         "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3bb1b3a5fdfef0672975be35da1f50b3/res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "/home/afurtak/Projects/Lyrify/app/build/intermediates/res/merged/debug/layout_fragment_lyrics.xml.flat",
+        "source": "/home/afurtak/Projects/Lyrify/app/src/main/res/layout/fragment_lyrics.xml"
+    },
+    {
         "merged": "/home/afurtak/Projects/Lyrify/app/build/intermediates/res/merged/debug/color_mtrl_tabs_colored_ripple_color.xml.flat",
         "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/8842535c09b4282dbec7651d02b023cb/res/color/mtrl_tabs_colored_ripple_color.xml"
     },
     {
         "merged": "/home/afurtak/Projects/Lyrify/app/build/intermediates/res/merged/debug/color_design_error.xml.flat",
         "source": "/home/afurtak/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/8842535c09b4282dbec7651d02b023cb/res/color/design_error.xml"
-    },
-    {
-        "merged": "/home/afurtak/Projects/Lyrify/app/build/intermediates/res/merged/debug/layout_fragment_lyrics.xml.flat",
-        "source": "/home/afurtak/Projects/Lyrify/app/src/main/res/layout/fragment_lyrics.xml"
     },
     {
         "merged": "/home/afurtak/Projects/Lyrify/app/build/intermediates/res/merged/debug/layout_design_navigation_item_subheader.xml.flat",

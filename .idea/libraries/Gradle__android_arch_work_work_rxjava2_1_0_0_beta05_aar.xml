@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: android.arch.work:work-rxjava2:1.0.0-beta05@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/work-rxjava2-1.0.0-beta05.aar/34dac1c6f3b6031f9a9379b184d973fb/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/work-rxjava2-1.0.0-beta05.aar/34dac1c6f3b6031f9a9379b184d973fb/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.work/work-rxjava2/1.0.0-beta05/5171ea2c1cad134c78bfef941aa2113feb296c9e/work-rxjava2-1.0.0-beta05-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

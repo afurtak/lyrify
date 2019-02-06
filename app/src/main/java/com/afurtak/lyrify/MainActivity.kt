@@ -1,6 +1,6 @@
 package com.afurtak.lyrify
 
-import android.app.Activity
+import android.arch.lifecycle.Observer
 import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -11,9 +11,10 @@ import com.spotify.sdk.android.authentication.AuthenticationResponse
 import com.spotify.sdk.android.authentication.LoginActivity.REQUEST_CODE
 import android.content.Intent
 import android.os.PersistableBundle
+import androidx.work.*
 import com.afurtak.lyrify.spotifyapiutils.*
 import com.spotify.sdk.android.authentication.AuthenticationRequest
-import com.spotify.sdk.android.authentication.LoginActivity
+
 
 class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpotifyLricsFragmentListener {
     private lateinit var fab : FloatingActionButton
@@ -157,29 +158,35 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
      * Calls when button submit was pressed on SearchForSongFragment.
      */
     override fun onSongFormSubmit(song: Song) {
-        LyricsDownloader().execute(song)
+
+        val inputData = Data.Builder()
+                .putString("title", song.title)
+                .putString("artist", song.artist)
+                .build()
+
+        val task = OneTimeWorkRequest
+                .Builder(com.afurtak.lyrify.LyricsDownloader::class.java)
+                .setInputData(inputData)
+                .build()
+
+        val workManager = WorkManager.getInstance()
+
+        workManager.enqueue(task)
+        workManager.getWorkInfoByIdLiveData(task.id).observe(this, Observer {
+            if (it != null) {
+                if (it.state == WorkInfo.State.SUCCEEDED) {
+                    val title = it.outputData.getString("title")
+                    val lyrics = it.outputData.getString("lyrics")
+                    addLyricsFragmentOnStack(title!!, lyrics!!)
+                }
+            }
+        })
     }
 
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle?) {
         super.onSaveInstanceState(outState, outPersistentState)
         supportFragmentManager.putFragment(outState, "GetSpotifySongLyricsFragmentKey", getSpotifySongLyricsFragment)
         supportFragmentManager.putFragment(outState, "SearchSongFormFragmentKey", searchSongFormFragment)
-    }
-
-
-
-    inner class LyricsDownloader : AsyncTask<Song, Any, String?>() {
-
-        var title: String = "no title"
-
-        override fun doInBackground(vararg songs: Song): String? {
-            title = songs[0].title
-            return songs[0].getLyrics()
-        }
-
-        override fun onPostExecute(result: String?) {
-            addLyricsFragmentOnStack(title, result ?: "no lyrics")
-        }
     }
 
     inner class SpotifyListener : AsyncTask<Unit, String, Unit>() {
