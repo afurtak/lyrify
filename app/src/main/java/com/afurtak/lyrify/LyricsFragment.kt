@@ -16,8 +16,8 @@ class LyricsFragment : Fragment() {
     var lyrics: String = ""
     var title: String = ""
 
-    val titleView: TextView by lazy { root.findViewById<TextView>(R.id.title) }
-    val lyricsView: TextView by lazy { root.findViewById<TextView>(R.id.lyrics) }
+    lateinit var titleView: TextView
+    lateinit var lyricsView: TextView
 
     lateinit var root: View
 
@@ -43,6 +43,9 @@ class LyricsFragment : Fragment() {
                 title = getString(titleBundleKey)!!
         }
 
+        titleView = root.findViewById(R.id.title)
+        lyricsView = root.findViewById(R.id.lyrics)
+
         titleView.text = title
         lyricsView.text = lyrics
 
@@ -52,6 +55,19 @@ class LyricsFragment : Fragment() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         with (outState) {
+            putString(titleBundleKey, title)
+            putString(lyricsBundleKey, lyrics)
+        }
+    }
+
+    fun setContent(title: String, lyrics: String) {
+        this.title = title
+        this.lyrics = lyrics
+
+        titleView.text = title
+        lyricsView.text = lyrics
+
+        arguments?.apply {
             putString(titleBundleKey, title)
             putString(lyricsBundleKey, lyrics)
         }
