@@ -25,21 +25,25 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState != null) {
-            if (savedInstanceState.containsKey("SearchSongFormFragmentKey")) {
-                searchSongFormFragment = supportFragmentManager.getFragment(savedInstanceState, "SearchSongFormFragmentKey") as SearchSongFormFragment
-            }
-
-            if (savedInstanceState.containsKey("GetSpotifySongLyricsFragmentKey")) {
-                getSpotifySongLyricsFragment = supportFragmentManager.getFragment(savedInstanceState, "GetSpotifySongLyricsFragmentKey") as GetSpotifySongLyricsFragment
-                supportFragmentManager.beginTransaction()
-                        .add(R.id.search_form_container, getSpotifySongLyricsFragment)
-                        .commit()
-            }
+            restoreData(savedInstanceState)
         }
         else {
             addGetSpotifySongLyricsFragment()
         }
         initializeFab()
+    }
+
+    private fun restoreData(savedInstanceState: Bundle) {
+        if (savedInstanceState.containsKey("SearchSongFormFragmentKey")) {
+            searchSongFormFragment = supportFragmentManager.getFragment(savedInstanceState, "SearchSongFormFragmentKey") as SearchSongFormFragment
+        }
+
+        if (savedInstanceState.containsKey("GetSpotifySongLyricsFragmentKey")) {
+            getSpotifySongLyricsFragment = supportFragmentManager.getFragment(savedInstanceState, "GetSpotifySongLyricsFragmentKey") as GetSpotifySongLyricsFragment
+            supportFragmentManager.beginTransaction()
+                    .add(R.id.search_form_container, getSpotifySongLyricsFragment)
+                    .commit()
+        }
     }
 
     private fun initializeFab() {
