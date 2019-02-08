@@ -1,12 +1,6 @@
 package com.afurtak.lyrify.spotifyapiutils
 
-import android.app.Activity
-import android.content.Context
 import com.afurtak.lyrify.Song
-import com.spotify.sdk.android.authentication.AuthenticationClient
-import com.spotify.sdk.android.authentication.AuthenticationRequest
-import com.spotify.sdk.android.authentication.AuthenticationResponse
-import com.spotify.sdk.android.authentication.LoginActivity
 import okhttp3.*
 import org.json.JSONObject
 import java.io.IOException
@@ -18,21 +12,18 @@ object CurrentlyPlaying {
     private val url = "https://api.spotify.com/v1/me/player/currently-playing"
     private val tokenHeader = "Authorization"
 
-    fun getCurrentluPlaying(spotifyAccesToken: String): Song? {
-        val responseFromSpotify = getResponseFromSPotify(spotifyAccesToken)
+    fun getCurrentlyPlaying(spotifyAccessToken: String): Song? {
+        val responseFromSpotify = getResponseFromSPotify(spotifyAccessToken)
         responseFromSpotify ?: return null
 
         return parseResponse(responseFromSpotify)
     }
 
-    fun getResponseFromSPotify(spotifyAccesToken: String): JSONObject? {
-
+    private fun getResponseFromSPotify(spotifyAccessToken: String): JSONObject? {
         val client = OkHttpClient()
-        val token = spotifyAccesToken
-
         val request = Request.Builder()
                 .url(url)
-                .addHeader(tokenHeader, "Bearer $spotifyAccesToken")
+                .addHeader(tokenHeader, "Bearer $spotifyAccessToken")
                 .build()
 
         val countDownLatch = CountDownLatch(1)
@@ -48,7 +39,6 @@ object CurrentlyPlaying {
                 result = response.body()!!.string()
                 countDownLatch.countDown()
             }
-
         })
 
         countDownLatch.await()
@@ -58,7 +48,7 @@ object CurrentlyPlaying {
         return JSONObject(result)
     }
 
-    fun parseResponse(response: JSONObject) : Song? {
+    private fun parseResponse(response: JSONObject) : Song? {
         return try {
             val track = response.getJSONObject("item")
             val artists = track.getJSONArray("artists")
@@ -71,8 +61,4 @@ object CurrentlyPlaying {
             null
         }
     }
-}
-
-object SpotifyAuthorizationUtils {
-
 }

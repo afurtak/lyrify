@@ -194,7 +194,7 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
         override fun doInBackground(vararg p0: Unit?) {
             var prev: Song? = null
             while (true) {
-                val song = CurrentlyPlaying.getCurrentluPlaying(spotifyAccesToken)
+                val song = CurrentlyPlaying.getCurrentlyPlaying(spotifyAccesToken)
                 if (song != prev) {
                     prev = song
                     if (song != null) {
