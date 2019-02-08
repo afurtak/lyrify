@@ -1,7 +1,8 @@
-package com.afurtak.lyrify
+package com.afurtak.lyrify.fragments
 
 import android.os.Handler
 import androidx.work.WorkInfo
+import com.afurtak.lyrify.fragments.LyricsFragment
 import com.afurtak.lyrify.songutils.*
 
 class ListeningLyricsFragment : LyricsFragment() {

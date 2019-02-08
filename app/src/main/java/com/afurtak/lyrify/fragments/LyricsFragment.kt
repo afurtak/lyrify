@@ -1,4 +1,4 @@
-package com.afurtak.lyrify
+package com.afurtak.lyrify.fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.work.WorkInfo
+import com.afurtak.lyrify.R
+import com.afurtak.lyrify.data.Song
 import com.afurtak.lyrify.songutils.LyricsUtils
 
 private const val titleBundleKey = "Title Bundle Key"

@@ -1,4 +1,4 @@
-package com.afurtak.lyrify
+package com.afurtak.lyrify.data
 
 import okhttp3.*
 import java.io.IOException

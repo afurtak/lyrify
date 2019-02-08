@@ -4,7 +4,7 @@ import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.Observer
 import android.content.Context
 import androidx.work.*
-import com.afurtak.lyrify.Song
+import com.afurtak.lyrify.data.Song
 
 
 object LyricsUtils {
