@@ -1,15 +1,17 @@
 package com.afurtak.lyrify
 
-
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.work.WorkInfo
+import com.afurtak.lyrify.songutils.LyricsUtils
 
 private const val titleBundleKey = "Title Bundle Key"
 private const val lyricsBundleKey = "Lyrics Bundle Key"
+
 
 open class LyricsFragment : Fragment() {
 
@@ -49,13 +51,18 @@ open class LyricsFragment : Fragment() {
         }
     }
 
-    fun setContent(title: String, lyrics: String) {
-        this.title = title
-        this.lyrics = lyrics
+    fun setContent(song: Song) {
+        LyricsUtils.getLyrics(this, song) {
+            if (it.state == WorkInfo.State.SUCCEEDED) {
+                val lyrics = it.outputData.getString("lyrics")
+                this.lyrics = lyrics!!
+                this.title = song.title
 
-        if (::titleView.isInitialized)
-        titleView.text = title
-        if (::lyricsView.isInitialized)
-        lyricsView.text = lyrics
+                if (::titleView.isInitialized)
+                    titleView.text = title
+                if (::lyricsView.isInitialized)
+                    lyricsView.text = lyrics
+            }
+        }
     }
 }

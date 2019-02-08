@@ -1,11 +1,8 @@
 package com.afurtak.lyrify
 
-import android.arch.lifecycle.Observer
 import android.os.Handler
-import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkInfo
-import androidx.work.WorkManager
-import com.afurtak.lyrify.spotifyapiutils.CurrentlyPlaying
+import com.afurtak.lyrify.songutils.*
 
 class ListeningLyricsFragment : LyricsFragment() {
 
@@ -20,26 +17,18 @@ class ListeningLyricsFragment : LyricsFragment() {
     }
 
     fun getData() {
-        val task = OneTimeWorkRequest.Builder(CurrentlyPlaying::class.java)
-                .build()
-
-        WorkManager
-                .getInstance()
-                .enqueue(task)
-
-        WorkManager
-                .getInstance()
-                .getWorkInfoByIdLiveData(task.id)
-                .observe(this, Observer {
-                    if (it != null) {
-                        if (it.state == WorkInfo.State.SUCCEEDED) {
-                            val title = it.outputData.getString("title")
-                            val lyrics = it.outputData.getString("lyrics")
-                            titleView.text = title
-                            lyricsView.text = lyrics
-                        }
-                    }
-                })
+        SpotifyUtils.getCurrentlyPlaying(this) {
+            if (it.state == WorkInfo.State.SUCCEEDED) {
+                val title = it.outputData.getString("title")
+                val lyrics = it.outputData.getString("lyrics")
+                titleView.text = title
+                lyricsView.text = lyrics
+            }
+            if (it.state == WorkInfo.State.FAILED) {
+                titleView.text = "No name"
+                lyricsView.text = "Finding lyrics for this song is not possible"
+            }
+        }
     }
 
     override fun onResume() {

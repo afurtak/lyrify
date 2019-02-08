@@ -54,8 +54,6 @@ data class Song(val title: String, val artist: String) {
     }
 
     private fun parseLyrics(fullPageCode: String) : String? {
-//        if (fullPageCode.contains("Nie ma takiego pliku", true))
-//            return null
         return fullPageCode
                 .substringAfter("Tekst piosenki:</h2><br />")
                 .substringBefore("<p>&nbsp;</p>")

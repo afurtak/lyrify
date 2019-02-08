@@ -11,73 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a084dd90-c56f-4113-92a6-b960ffe4752f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/build-info/debug/build-info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/build-info/debug/build-info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/ListeningLyricsFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/ListeningLyricsFragment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity$initializeFab$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity$initializeFab$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity$initializeFab$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity$initializeFab$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity$onSongFormSubmit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity$onSongFormSubmit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying$getResponseFromSPotify$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying$getResponseFromSPotify$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtilsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtilsKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_3/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_3/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_5/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/ir_slices/debug/package_slice_5/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_3.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_3.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_5.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/split-apk/debug/slices/slice_5.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/ListeningLyricsFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/ListeningLyricsFragment.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity$initializeFab$1$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity$initializeFab$1$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity$initializeFab$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity$initializeFab$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity$onSongFormSubmit$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity$onSongFormSubmit$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/443/com/afurtak/lyrify/MainActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/445/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying$getResponseFromSPotify$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/445/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying$getResponseFromSPotify$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/445/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/445/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/445/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtilsKt.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/445/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtilsKt.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/3/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/3/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/5/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/5/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/ListeningLyricsFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/ListeningLyricsFragment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity$initializeFab$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity$initializeFab$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity$initializeFab$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity$initializeFab$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity$onSongFormSubmit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity$onSongFormSubmit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying$getResponseFromSPotify$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying$getResponseFromSPotify$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtilsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/0/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtilsKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/ListeningLyricsFragment$runnable$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/ListeningLyricsFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/ListeningLyricsFragment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity$addLyricsFragmentOnStack$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity$initializeFab$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity$initializeFab$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity$initializeFab$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity$initializeFab$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity$onSongFormSubmit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity$onSongFormSubmit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying$getResponseFromSPotify$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying$getResponseFromSPotify$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/spotifyapiutils/CurrentlyPlaying.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtilsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtilsKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/ListeningLyricsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/ListeningLyricsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/LyricsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/LyricsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/MainActivity.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +47,7 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="gradle" value="2" />
-          <entry key="kt" value="13" />
+          <entry key="kt" value="16" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
@@ -120,21 +55,21 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="2" />
-          <entry key="Kotlin" value="13" />
+          <entry key="Kotlin" value="16" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="24" />
-          <entry key="kt" value="9103" />
+          <entry key="kt" value="10151" />
           <entry key="xml" value="966" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="24" />
-          <entry key="Kotlin" value="9103" />
+          <entry key="Kotlin" value="10151" />
           <entry key="XML" value="966" />
         </counts>
       </usages-collector>
@@ -143,33 +78,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtils.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/songutils/SpotifyApiUtils.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+            <state>
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
-                <element signature="e#44#274#0" expanded="true" />
+                <element signature="e#44#381#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/LyricsDownloader.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/songutils/LyricsUtils.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/ListeningLyricsFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            <state relative-caret-position="165">
+              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
               <folding>
-                <element signature="e#28#248#0" expanded="true" />
+                <element signature="e#38#208#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -178,22 +104,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/LyricsFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+            <state relative-caret-position="304">
+              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
               <folding>
-                <element signature="e#29#213#0" expanded="true" />
+                <element signature="e#28#260#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="163" column="13" selection-start-line="157" selection-start-column="12" selection-end-line="163" selection-end-column="13" />
+            <state relative-caret-position="259">
+              <caret line="62" column="68" lean-forward="true" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
               <folding>
-                <element signature="e#28#659#0" expanded="true" />
+                <element signature="e#28#518#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2845,17 +2771,20 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_get_spotify_song_lyrics.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/GetSpotifySongLyricsFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_search_song_form.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/SearchSongFormFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_lyrics.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/LyricsDownloader.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/LyricsFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/ListeningLyricsActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/LyricsDownloader.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtils.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/songutils/LyricsDownloader.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/ListeningLyricsFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/songutils/SpotifyApiUtils.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/Song.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/SearchSongFormFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/GetSpotifySongLyricsFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/LyricsFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/MainActivity.kt" />
       </list>
     </option>
   </component>
@@ -2923,7 +2852,7 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="lyrify" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="spotifyapiutils" type="462c0819:PsiDirectoryNode" />
+              <item name="songutils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Lyrify" type="1abcf292:AndroidViewProjectNode" />
@@ -2941,6 +2870,11 @@
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="device.picker.selection" value="Nexus_5X_API_26" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.afurtak.lyrify.songutils" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -3032,21 +2966,21 @@
     <frame x="626" y="27" width="1294" height="1053" extended-state="4" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49837133" visible="true" weight="0.2996795" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49837133" visible="true" weight="0.18669872" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="0" sideWeight="0.4991987" visible="true" weight="0.32969433" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.4991987" weight="0.32969433" />
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4991987" weight="0.32969433" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32969433" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50080127" side_tool="true" visible="true" weight="0.32969433" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50080127" side_tool="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4997233" weight="0.32969433" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4997233" visible="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -3084,13 +3018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/SearchSongFormFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="109" column="3" lean-forward="true" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/spotify-auth-release-1.1.0.aar/9d9e5ba2101fbce6008df85b5ac11448/jars/classes.jar!/com/spotify/sdk/android/authentication/LoginActivity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -3103,13 +3030,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/Song.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -3135,59 +3055,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/Song.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+          <folding>
+            <element signature="e#28#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/SearchSongFormFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/GetSpotifySongLyricsFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state relative-caret-position="765">
+          <caret line="51" column="3" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
           <folding>
             <element signature="e#28#317#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/LyricsDownloader.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/ListeningLyricsFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="163" column="13" selection-start-line="157" selection-start-column="12" selection-end-line="163" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#28#659#0" expanded="true" />
+            <element signature="e#28#97#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/spotifyapiutils/SpotifyApiUtils.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/songutils/LyricsUtils.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="165">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding>
-            <element signature="e#44#274#0" expanded="true" />
+            <element signature="e#38#208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/songutils/SpotifyApiUtils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#44#381#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/LyricsFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        <state relative-caret-position="304">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
           <folding>
-            <element signature="e#29#213#0" expanded="true" />
+            <element signature="e#28#260#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/ListeningLyricsFragment.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/afurtak/lyrify/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="259">
+          <caret line="62" column="68" lean-forward="true" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
           <folding>
-            <element signature="e#28#248#0" expanded="true" />
+            <element signature="e#28#518#0" expanded="true" />
           </folding>
         </state>
       </provider>
