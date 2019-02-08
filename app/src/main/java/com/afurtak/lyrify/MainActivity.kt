@@ -75,20 +75,10 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
                 .commit()
     }
 
-    private fun startListeningForSpotifySongs() {
-        if (!::lyricsFragment.isInitialized)
-            lyricsFragment = LyricsFragment()
-        if(!isSpotifyListening) {
-            isSpotifyListening = true
-        }
-    }
-
     private fun addLyricsFragmentOnStack(title: String, lyrics: String) {
         if (!::lyricsFragment.isInitialized)
-            lyricsFragment = LyricsFragment.newInstance(title, lyrics)
-        else {
-            lyricsFragment.setContent(title, lyrics)
-        }
+            lyricsFragment = LyricsFragment()
+        lyricsFragment.setContent(title, lyrics)
 
         supportFragmentManager.beginTransaction()
                 .replace(R.id.search_form_container, lyricsFragment)
@@ -98,7 +88,7 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
 
     private fun addLyricsFragmentOnStack() {
         if (!::lyricsFragment.isInitialized)
-            lyricsFragment = LyricsFragment()
+            lyricsFragment = ListeningLyricsActivity()
 
         supportFragmentManager.beginTransaction()
                 .replace(R.id.search_form_container, lyricsFragment)

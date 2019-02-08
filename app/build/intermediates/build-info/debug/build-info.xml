@@ -5,23 +5,24 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
+    ir-eligibility="CLASS_ADDED"
     plugin-version="3.3.0"
-    timestamp="1549488783340"
+    timestamp="1549644317696"
     token="5814807146433901771"
-    verifier="METHOD_ADDED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="22" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="64" />
+        duration="30" />
     <task
         name="verifier"
-        duration="18" />
+        duration="1" />
 
     <artifact
         location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -29,24 +30,8 @@
 
     <build
         build-mode="FULL"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1549486196332"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
+        timestamp="1549643998194"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
@@ -54,7 +39,16 @@
             location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
+            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+        <artifact
             location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
@@ -63,19 +57,26 @@
             location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1549488783340"
-        verifier="METHOD_ADDED" >
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1549644317696"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />

@@ -11,7 +11,7 @@ import android.widget.TextView
 private const val titleBundleKey = "Title Bundle Key"
 private const val lyricsBundleKey = "Lyrics Bundle Key"
 
-class LyricsFragment : Fragment() {
+open class LyricsFragment : Fragment() {
 
     var lyrics: String = ""
     var title: String = ""
@@ -20,17 +20,6 @@ class LyricsFragment : Fragment() {
     lateinit var lyricsView: TextView
 
     lateinit var root: View
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        arguments?.apply {
-            if (containsKey(lyricsBundleKey))
-                lyrics = getString(lyricsBundleKey)!!
-            if (containsKey(titleBundleKey))
-                title = getString(titleBundleKey)!!
-        }
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -64,32 +53,9 @@ class LyricsFragment : Fragment() {
         this.title = title
         this.lyrics = lyrics
 
+        if (::titleView.isInitialized)
         titleView.text = title
+        if (::lyricsView.isInitialized)
         lyricsView.text = lyrics
-
-        arguments?.apply {
-            putString(titleBundleKey, title)
-            putString(lyricsBundleKey, lyrics)
-        }
-    }
-
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param title .
-         * @param lyrics .
-         * @return A new instance of fragment LyricsFragment.
-         */
-        @JvmStatic
-        fun newInstance(title: String, lyrics: String) =
-                LyricsFragment().apply {
-                    arguments = Bundle().apply {
-                        putString(titleBundleKey, title)
-                        putString(lyricsBundleKey, lyrics)
-                    }
-                }
     }
 }
