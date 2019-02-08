@@ -1,7 +1,6 @@
 package com.afurtak.lyrify
 
 import android.arch.lifecycle.Observer
-import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
@@ -12,7 +11,7 @@ import com.spotify.sdk.android.authentication.LoginActivity.REQUEST_CODE
 import android.content.Intent
 import android.os.PersistableBundle
 import androidx.work.*
-import com.afurtak.lyrify.spotifyapiutils.*
+import com.afurtak.lyrify.spotifyapiutils.spotifyAccessToken
 import com.spotify.sdk.android.authentication.AuthenticationRequest
 
 
@@ -23,7 +22,6 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
     private lateinit var searchSongFormFragment: SearchSongFormFragment
     private lateinit var lyricsFragment: LyricsFragment
 
-    var spotifyAccesToken = ""
     val spotifyClientId = "1a9664b8e378430285f036a4783b1ac4"
     val spotifyRedirectUri = "https://example.com/callback/"
 
@@ -81,7 +79,6 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
         if (!::lyricsFragment.isInitialized)
             lyricsFragment = LyricsFragment()
         if(!isSpotifyListening) {
-            SpotifyListener().execute()
             isSpotifyListening = true
         }
     }
@@ -118,8 +115,8 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
 
             when (response.type) {
                 AuthenticationResponse.Type.TOKEN -> {
-                    spotifyAccesToken = response.accessToken
-                    Toast.makeText(this, spotifyAccesToken, Toast.LENGTH_SHORT).show()
+                    spotifyAccessToken = response.accessToken
+                    Toast.makeText(this, spotifyAccessToken, Toast.LENGTH_SHORT).show()
                 }
                 AuthenticationResponse.Type.ERROR ->
                     Toast.makeText(this, "failed authentication", Toast.LENGTH_SHORT).show()
@@ -140,18 +137,16 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
         val request = builder.build()
 
         AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request)
-
     }
 
     /**
      * Calls when button in GetSpotifySongFragment was pressed.
      */
     override fun onGetLyrics() {
-        if (spotifyAccesToken == "") {
+        if (spotifyAccessToken == "") {
             getSpotifyAuthorizationToken()
         }
         addLyricsFragmentOnStack()
-        startListeningForSpotifySongs()
     }
 
     /**
@@ -187,40 +182,5 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
         super.onSaveInstanceState(outState, outPersistentState)
         supportFragmentManager.putFragment(outState, "GetSpotifySongLyricsFragmentKey", getSpotifySongLyricsFragment)
         supportFragmentManager.putFragment(outState, "SearchSongFormFragmentKey", searchSongFormFragment)
-    }
-
-    inner class SpotifyListener : AsyncTask<Unit, String, Unit>() {
-
-        override fun doInBackground(vararg p0: Unit?) {
-            var prev: Song? = null
-            while (true) {
-                val song = CurrentlyPlaying.getCurrentlyPlaying(spotifyAccesToken)
-                if (song != prev) {
-                    prev = song
-                    if (song != null) {
-                        val lyrics = song.getLyrics()
-                        if (lyrics != null)
-                            publishProgress(song.title, lyrics)
-                        else
-                            publishProgress(song.title, "No lyrics found.")
-                    } else {
-                        publishProgress("No title", "Nothing is playing now.")
-                    }
-                }
-                Thread.sleep(1000)
-            }
-        }
-
-        override fun onProgressUpdate(vararg values: String?) {
-            super.onProgressUpdate(*values)
-            if (lyricsFragment.isVisible) {
-                lyricsFragment.setContent(values[0]!!, values[1]!!)
-            }
-            else {
-                Toast.makeText(this@MainActivity, "is cancelled", Toast.LENGTH_LONG).show()
-                this.cancel(false)
-                isSpotifyListening = false
-            }
-        }
     }
 }

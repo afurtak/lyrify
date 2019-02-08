@@ -7,6 +7,8 @@ import java.io.IOException
 import java.lang.Exception
 import java.util.concurrent.CountDownLatch
 
+var spotifyAccessToken = ""
+
 object CurrentlyPlaying {
 
     private val url = "https://api.spotify.com/v1/me/player/currently-playing"
