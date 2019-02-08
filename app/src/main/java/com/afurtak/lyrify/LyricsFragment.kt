@@ -15,54 +15,59 @@ private const val lyricsBundleKey = "Lyrics Bundle Key"
 
 open class LyricsFragment : Fragment() {
 
-    var lyrics: String = ""
-    var title: String = ""
+    var song: Song = Song("", "")
+    set(value) {
+        field = value
+        dataWasChanged = true
+    }
 
     lateinit var titleView: TextView
     lateinit var lyricsView: TextView
+
+    var dataWasChanged: Boolean = false
 
     lateinit var root: View
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         root = inflater.inflate(R.layout.fragment_lyrics, container, false)
-
-        savedInstanceState?.apply {
-            if (containsKey(lyricsBundleKey))
-                lyrics = getString(lyricsBundleKey)!!
-            if (containsKey(titleBundleKey))
-                title = getString(titleBundleKey)!!
-        }
-
         titleView = root.findViewById(R.id.title)
         lyricsView = root.findViewById(R.id.lyrics)
 
-        titleView.text = title
-        lyricsView.text = lyrics
+        if (!dataWasChanged)
+            savedInstanceState?.apply {
+                if (containsKey(lyricsBundleKey))
+                    lyricsView.text = getString(lyricsBundleKey)!!
+                if (containsKey(titleBundleKey))
+                    titleView.text = getString(titleBundleKey)!!
+            }
+
+
+        if (dataWasChanged)
+            setContent(song)
+
 
         return root
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        with (outState) {
-            putString(titleBundleKey, title)
-            putString(lyricsBundleKey, lyrics)
-        }
     }
 
     fun setContent(song: Song) {
         LyricsUtils.getLyrics(this, song) {
             if (it.state == WorkInfo.State.SUCCEEDED) {
                 val lyrics = it.outputData.getString("lyrics")
-                this.lyrics = lyrics!!
-                this.title = song.title
 
-                if (::titleView.isInitialized)
-                    titleView.text = title
-                if (::lyricsView.isInitialized)
-                    lyricsView.text = lyrics
+                titleView.text = song.title
+                lyricsView.text = lyrics
+
+                dataWasChanged = false
             }
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        with (outState) {
+            putString(titleBundleKey, titleView.text.toString())
+            putString(lyricsBundleKey, lyricsView.text.toString())
         }
     }
 }

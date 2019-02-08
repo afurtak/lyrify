@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
     private fun addLyricsFragmentOnStack(song: Song) {
         if (!::lyricsFragment.isInitialized)
             lyricsFragment = LyricsFragment()
-        lyricsFragment.setContent(song)
+        lyricsFragment.song = song
 
         supportFragmentManager.beginTransaction()
                 .replace(R.id.search_form_container, lyricsFragment)
