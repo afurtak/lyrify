@@ -1,5 +1,9 @@
 package com.afurtak.lyrify.spotifyapiutils
 
+import android.content.Context
+import androidx.work.Data
+import androidx.work.Worker
+import androidx.work.WorkerParameters
 import com.afurtak.lyrify.Song
 import okhttp3.*
 import org.json.JSONObject
@@ -9,12 +13,31 @@ import java.util.concurrent.CountDownLatch
 
 var spotifyAccessToken = ""
 
-object CurrentlyPlaying {
+class CurrentlyPlaying(
+        context: Context,
+        workerParameters: WorkerParameters
+) : Worker(context, workerParameters) {
+
+    override fun doWork(): Result {
+        val song = getCurrentlyPlaying()
+        song ?: return Result.failure()
+
+        val lyrics = song.getLyrics()
+        lyrics ?: return Result.failure()
+
+        val outputData = Data.Builder()
+                .putString("title", song.title)
+                .putString("artist", song.artist)
+                .putString("lyrics", lyrics)
+                .build()
+
+        return Result.success(outputData)
+    }
 
     private val url = "https://api.spotify.com/v1/me/player/currently-playing"
     private val tokenHeader = "Authorization"
 
-    fun getCurrentlyPlaying(spotifyAccessToken: String): Song? {
+    fun getCurrentlyPlaying(): Song? {
         val responseFromSpotify = getResponseFromSPotify(spotifyAccessToken)
         responseFromSpotify ?: return null
 

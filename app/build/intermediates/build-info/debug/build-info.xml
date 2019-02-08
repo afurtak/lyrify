@@ -5,25 +5,28 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
+    ir-eligibility="CLASS_ADDED"
     plugin-version="3.3.0"
-    timestamp="1549645515737"
+    timestamp="1549646836799"
     token="5814807146433901771"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="23" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="13" />
+        duration="51" />
     <task
         name="verifier"
-        duration="4" />
+        duration="3" />
 
+    <artifact
+        location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
     <artifact
         location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
@@ -74,9 +77,12 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1549645515737"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1549646836799"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
         <artifact
             location="/home/afurtak/Projects/Lyrify/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
