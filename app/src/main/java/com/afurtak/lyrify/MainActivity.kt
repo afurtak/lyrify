@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
     private lateinit var fab : FloatingActionButton
     private lateinit var getSpotifySongLyricsFragment: GetSpotifySongLyricsFragment
     private lateinit var searchSongFormFragment: SearchSongFormFragment
-    private lateinit var lyricsFragment: LyricsFragment
-    private lateinit var listeningLyricsFragment: ListeningLyricsFragment
+    private lateinit var displayingLyricsFragment: DisplayingLyricsFragment
+    private lateinit var listeningSpotifyLyricsFragment: ListeningSpotifyLyricsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,22 +56,22 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
     }
 
     private fun addLyricsFragmentOnStack(song: Song) {
-        if (!::lyricsFragment.isInitialized)
-            lyricsFragment = LyricsFragment()
-        lyricsFragment.song = song
+        if (!::displayingLyricsFragment.isInitialized)
+            displayingLyricsFragment = DisplayingLyricsFragment()
+        displayingLyricsFragment.song = song
 
         supportFragmentManager.beginTransaction()
-                .replace(R.id.search_form_container, lyricsFragment)
+                .replace(R.id.search_form_container, displayingLyricsFragment)
                 .addToBackStack(null)
                 .commit()
     }
 
     private fun addLyricsFragmentOnStack() {
-        if (!::listeningLyricsFragment.isInitialized)
-            listeningLyricsFragment = ListeningLyricsFragment()
+        if (!::listeningSpotifyLyricsFragment.isInitialized)
+            listeningSpotifyLyricsFragment = ListeningSpotifyLyricsFragment()
 
         supportFragmentManager.beginTransaction()
-                .replace(R.id.search_form_container, listeningLyricsFragment)
+                .replace(R.id.search_form_container, listeningSpotifyLyricsFragment)
                 .addToBackStack(null)
                 .commit()
     }
@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity(), SearchSongFormFragmentListener, GetSpo
         super.onSaveInstanceState(outState, outPersistentState)
         supportFragmentManager.putFragment(outState, "GetSpotifySongLyricsFragmentKey", getSpotifySongLyricsFragment)
         supportFragmentManager.putFragment(outState, "SearchSongFormFragmentKey", searchSongFormFragment)
-        supportFragmentManager.putFragment(outState, "ListeningLyricsFragment", listeningLyricsFragment)
-        supportFragmentManager.putFragment(outState, "LyricsFragment", lyricsFragment)
+        supportFragmentManager.putFragment(outState, "ListeningSpotifyLyricsFragment", listeningSpotifyLyricsFragment)
+        supportFragmentManager.putFragment(outState, "DisplayingLyricsFragment", displayingLyricsFragment)
     }
 }
